@@ -1,0 +1,373 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix cc: <https://w3id.org/cc#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix rd: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix n: <http://www.w3.org/2003/06/sw-vocab-status/ns#>.
+@prefix n0: <http://xmlns.com/foaf/0.1/>.
+@prefix n1: <http://melvincarvalho.com/#>.
+@prefix c: </cc#>.
+
+cc:
+    terms:created
+       "2013-10-13"^^XML:date;
+    a    owl:Ontology;
+    rd:comment
+        "\n   Ontology for crypto currencies.\n   This is in development.\n   Ontology for Crypto Currencies:\n     * bitcoin\n     * bitmark\n     * alt coins\n     * ripple\n     * others\n   "@en;
+    rd:label
+       "Ontology for Crypto Currencies.";
+    n:term_status
+       "unstable";
+    n0:maker
+       n1:me.
+cc:BlockHeader
+    a    rdf:Class;
+    rd:comment
+       "\n       A Block Header for a crypto currency\n    "@en;
+    rd:isDefinedBy
+       c:;
+    rd:label
+       "BlockHeader"@en, "Credit"@en;
+    n:term_status
+       "unstable".
+cc:Credit
+    a    rdf:Class;
+    rd:comment
+       "\n       A Credit / IOU between two parties.\n    "@en;
+    rd:isDefinedBy
+       c:;
+    rd:label
+       "Credit"@en;
+    n:term_status
+       "unstable".
+cc:IronWallet
+    a    rdf:Class;
+    rd:comment
+        "\n       A multi user wallet of according to the Iron Wallet rules for webcredits.\n    "@en;
+    rd:isDefinedBy
+       c:;
+    rd:label
+       "IronWallet"@en;
+    n:term_status
+       "unstable".
+cc:MerkleRoot
+    a    rdf:Class;
+    rd:comment
+       "\n       The root of a merkle tree, of items\n    "@en;
+    rd:isDefinedBy
+       c:;
+    rd:label
+       "MerkleRoot"@en;
+    n:term_status
+       "unstable".
+cc:TransactionInput
+    a    rdf:Class;
+    rd:comment
+       "\n       A Block Transaction Input for a crypto currency\n    "@en;
+    rd:isDefinedBy
+       c:;
+    rd:label
+       "TransactionInput"@en;
+    n:term_status
+       "unstable".
+cc:TransactionOutput
+    a    rdf:Class;
+    rd:comment
+       "\n       A Block Transaction Output for a crypto currency\n    "@en;
+    rd:isDefinedBy
+       c:;
+    rd:label
+       "TransactionOutput"@en;
+    n:term_status
+       "unstable".
+cc:Wallet
+    a    rdf:Class;
+    rd:comment
+       "\n       A multi user wallet\n    "@en;
+    rd:isDefinedBy
+       c:;
+    rd:label
+       "Wallet"@en;
+    n:term_status
+       "unstable".
+cc:amount
+    a    rdf:Property;
+    rd:comment
+       "\n       The amount of a credit between two entities.\n    "@en;
+    rd:isDefinedBy
+       c:;
+    rd:label
+       "amount"@en;
+    n:term_status
+       "unstable".
+cc:bit
+    a    rdf:Property;
+    rd:comment
+       "\n       Indicates one millionth of a bitcoin.\n    "@en;
+    rd:isDefinedBy
+       c:;
+    rd:label
+       "bit"@en;
+    n:term_status
+       "unstable".
+cc:bitcoin
+    a    rdf:Property;
+    rd:comment
+        "\n       This represents a bitcoin address which should be a bitcoin: URI\n    "@en;
+    rd:isDefinedBy
+       c:;
+    rd:label
+       "bitcoin"@en;
+    n:term_status
+       "unstable".
+cc:bitmark
+    a    rdf:Property;
+    rd:comment
+        "\n       This represents a bitcoin address which should be a bitmark: URI\n    "@en;
+    rd:isDefinedBy
+       c:;
+    rd:label
+       "bitmark"@en;
+    n:term_status
+       "unstable".
+cc:blockHeaderHash
+    a    rdf:Property;
+    rd:comment
+       "\n       A hash of a block (traditionally sha256)\n    "@en;
+    rd:isDefinedBy
+       c:;
+    rd:label
+       "blockHeaderHash"@en;
+    n:term_status
+       "unstable".
+cc:created
+    a    rdf:Property;
+    rd:comment
+        "\n       Approximate time something was created, similar to very dcterms created but may have an error term.\n    "@en;
+    rd:isDefinedBy
+       c:;
+    rd:label
+       "created"@en;
+    n:term_status
+       "unstable".
+cc:currency
+    a    rdf:Property;
+    rd:comment
+        "\n       The currency of a credit between two entities, as a URI.\n    "@en;
+    rd:isDefinedBy
+       c:;
+    rd:label
+       "currency"@en;
+    n:term_status
+       "unstable".
+cc:destination
+    a    rdf:Property;
+    rd:comment
+       "\n       The destination of a credit between two entities.\n    "@en;
+    rd:isDefinedBy
+       c:;
+    rd:label
+       "destination"@en;
+    n:term_status
+       "unstable".
+cc:hasInput
+    a    rdf:Property;
+    rd:comment
+       "\n       A block transaction has an input.\n    "@en;
+    rd:isDefinedBy
+       c:;
+    rd:label
+       "hasInput"@en;
+    n:term_status
+       "unstable".
+cc:hasOutput
+    a    rdf:Property;
+    rd:comment
+       "\n       A block transaction has an ouput.\n    "@en;
+    rd:isDefinedBy
+       c:;
+    rd:label
+       "hasOutput"@en;
+    n:term_status
+       "unstable".
+cc:hasTransaction
+    a    rdf:Property;
+    rd:comment
+       "\n       The block chain has a transaction.\n    "@en;
+    rd:isDefinedBy
+       c:;
+    rd:label
+       "hasTransaction"@en;
+    n:term_status
+       "unstable".
+cc:height
+    a    rdf:Property;
+    rd:comment
+       "\n       The height according to the longest chain.\n    "@en;
+    rd:isDefinedBy
+       c:;
+    rd:label
+       "height"@en;
+    n:term_status
+       "unstable".
+cc:inbox
+    a    rdf:Property;
+    rd:comment
+       "\n       Inbox for new transactions\n    "@en;
+    rd:isDefinedBy
+       c:;
+    rd:label
+       "inbox"@en;
+    n:term_status
+       "unstable".
+cc:index
+    a    rdf:Property;
+    rd:comment
+        "\n       The index number of an input or output, sometimes referred to as vout or n\n    "@en;
+    rd:isDefinedBy
+       c:;
+    rd:label
+       "index"@en;
+    n:term_status
+       "unstable".
+cc:latestBlockHeader
+    a    rdf:Property;
+    rd:comment
+       "\n       The latest block header for an electronic coin.\n    "@en;
+    rd:isDefinedBy
+       c:;
+    rd:label
+       "latestBlockHeader"@en;
+    n:term_status
+       "unstable".
+cc:lockTime
+    a    rdf:Property;
+    rd:comment
+        "\n       This is the lock time.  For bitcoin if non-zero and sequence numbers are < 0xFFFFFFFF: block height or timestamp when transaction is final\n    "@en;
+    rd:isDefinedBy
+       c:;
+    rd:label
+       "lockTime"@en;
+    n:term_status
+       "unstable".
+cc:mark
+    a    rdf:Property;
+    rd:comment
+        "\n       A mark is used to indicate approval of an honest actor (based on their URI).  This adds a meta layer of micro trust over the zero trust protocol, allowing, for example, thin clients to make storage / delegation trade-offs.  The term is overloaded as a dual meaning which also represents 1/1000th of the bitmark currency.  Arguably this term belongs in a new vocab, which may be added in future.\n    "@en;
+    rd:isDefinedBy
+       c:;
+    rd:label
+       "mark"@en;
+    n:term_status
+       "unstable".
+cc:nbits
+    a    rdf:Property;
+    rd:comment
+        "\n       This is the term used in the bitcoin reference client.  It is the target, but in a compact and custom 4-byte encoding.\n    "@en;
+    rd:isDefinedBy
+       c:;
+    rd:label
+       "nbits"@en;
+    n:term_status
+       "unstable".
+cc:previousBlockHeader
+    a    rdf:Property;
+    rd:comment
+       "\n       The previous block header\n    "@en;
+    rd:isDefinedBy
+       c:;
+    rd:label
+       "previousBlockHeader"@en;
+    n:term_status
+       "unstable".
+cc:protocolSpecification
+    a    rdf:Property;
+    rd:comment
+       "\n       The protocol used to verify electronic coins.\n    "@en;
+    rd:isDefinedBy
+       c:;
+    rd:label
+       "protocolSpecification"@en;
+    n:term_status
+       "unstable".
+cc:scriptSig
+    a    rdf:Property;
+    rd:comment
+       "\n       The input scriptSig\n    "@en;
+    rd:isDefinedBy
+       c:;
+    rd:label
+       "scriptSig"@en;
+    n:term_status
+       "unstable".
+cc:sequence
+    a    rdf:Property;
+    rd:comment
+       "\n       Transaction sequence.\n    "@en;
+    rd:isDefinedBy
+       c:;
+    rd:label
+       "sequence"@en;
+    n:term_status
+       "unstable".
+cc:source
+    a    rdf:Property;
+    rd:comment
+       "\n       The source of a credit between two entities.\n    "@en;
+    rd:isDefinedBy
+       c:;
+    rd:label
+       "source"@en;
+    n:term_status
+       "unstable".
+cc:testnet3
+    a    rdf:Property;
+    rd:comment
+        "\n       This represents a bitcoin testnet3 address which should be a bitcoin: URI\n    "@en;
+    rd:isDefinedBy
+       c:;
+    rd:label
+       "testnet3"@en;
+    n:term_status
+       "unstable".
+cc:timestamp
+    a    rdf:Property;
+    rd:comment
+       "\n       A unix timestamp for crypto blocks\n    "@en;
+    rd:isDefinedBy
+       c:;
+    rd:label
+       "timestamp"@en;
+    n:term_status
+       "unstable".
+cc:tx
+    a    rdf:Property;
+    rd:comment
+       "\n       Where transactions are stored\n    "@en;
+    rd:isDefinedBy
+       c:;
+    rd:label
+       "tx"@en;
+    n:term_status
+       "unstable".
+cc:variable
+    a    rdf:Property;
+    rd:comment
+        "\n       A variable symbol that can be sent with a transaction.  Not part of web credits core.\n    "@en;
+    rd:isDefinedBy
+       c:;
+    rd:label
+       "variable"@en;
+    n:term_status
+       "unstable".
+cc:wallet
+    a    rdf:Property;
+    rd:comment
+       "\n       Relates a user to a wallet URI\n    "@en;
+    rd:isDefinedBy
+       c:;
+    rd:label
+       "wallet"@en;
+    n:term_status
+       "unstable".
